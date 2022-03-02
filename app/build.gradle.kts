@@ -1,0 +1,31 @@
+plugins {
+    application
+    id("org.graalvm.buildtools.native")
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.jline:jline:3.21.0")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
+}
+
+application {
+    mainClass.set("org.graalvm.demo.App")
+}
+
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
+}
+
+graalvmNative {
+    configurationRepository {
+        enabled.set(true)
+        uri(file("../checkouts/config-repo/config"))
+    }
+    binaries.all {
+        buildArgs.add("--allow-incomplete-classpath")
+    }
+}
