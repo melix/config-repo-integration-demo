@@ -12,9 +12,9 @@ gitRepositories {
         uri.set("git@github.com:graalvm/native-build-tools.git")
         branch.set("cc/config-repository-gradle")
     }
-    include("config-repo") {
-        uri.set("git@github.com:graalvm/native-configuration.git")
-        branch.set("lm/jline-tests")
+    include("jvm-metadata-repo") {
+        uri.set("git@github.com:graalvm/jvm-reachability-metadata.git")
+        branch.set("master")
         autoInclude.set(false)
     }
 }

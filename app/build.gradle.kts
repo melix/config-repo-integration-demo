@@ -21,9 +21,9 @@ tasks.withType<Test>().configureEach {
 }
 
 graalvmNative {
-    configurationRepository {
+    jvmReachabilityMetadataRepository {
         enabled.set(true)
-        uri(file("../checkouts/config-repo/config"))
+        uri(file("../checkouts/jvm-metadata-repo/metadata"))
     }
     binaries.all {
         buildArgs.add("--allow-incomplete-classpath")
