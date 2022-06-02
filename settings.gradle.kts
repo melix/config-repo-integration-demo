@@ -10,11 +10,12 @@ include("app")
 gitRepositories {
     include("native-build-tools") {
         uri.set("git@github.com:graalvm/native-build-tools.git")
-        branch.set("cc/config-repository-gradle")
+        branch.set("master")
     }
     include("jvm-metadata-repo") {
-        uri.set("git@github.com:graalvm/jvm-reachability-metadata.git")
+        uri.set("git@github.com:graalvm/graalvm-reachability-metadata.git")
         branch.set("master")
         autoInclude.set(false)
     }
 }
+

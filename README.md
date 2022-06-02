@@ -1,4 +1,4 @@
-## JVM Reachability Metadata Repository integration demo
+## GraalVM Reachability Metadata Repository integration demo
 
 This project demonstrates integration between Gradle and the JVM reachability metadata repository.
 

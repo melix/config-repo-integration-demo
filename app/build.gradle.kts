@@ -21,7 +21,7 @@ tasks.withType<Test>().configureEach {
 }
 
 graalvmNative {
-    jvmReachabilityMetadataRepository {
+    metadataRepository {
         enabled.set(true)
         uri(file("../checkouts/jvm-metadata-repo/metadata"))
     }
